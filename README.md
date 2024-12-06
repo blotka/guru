@@ -1,1 +1,1 @@
-... fragmenty stron Pavlicka
+Pavlicek: liczenie w rozgrywce
