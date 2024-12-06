@@ -1,0 +1,56 @@
+h1{text-align:center;color:#000099}
+h2{color:#000099}
+h3{color:#36648B}
+h4{color:#3A5FCD;margin:1em 0}
+h5{font-size:1.4em;font-family:cursive;font-weight:500;color:#000088}
+h6{font-size:1.17em;font-family:cursive;font-weight:500;color:#000088}
+div.c{text-align:center}
+p.b{text-align:center;color:#B22222}
+p.c{text-align:center;color:#006600}
+p.f{margin:0px 50px 20px;font-size:smaller}
+p.q{color:#104E8B}
+p.r{text-align:center;color:#990000}
+p.s{margin:0px 50px 20px;font-size:smaller;text-align:center}
+p.t{text-align:center}
+em{font-style:normal;font-weight:bold;color:#000099}
+th{text-align:center;background-color:#99CCFF}
+td.c{text-align:center}
+td.l{text-align:left}
+td.i{text-align:right}
+td.j{color:#006600}
+td.k{text-align:right;color:#006600}
+td.s{font-size:smaller}
+td.a{background-color:#DDEEFF}
+td.f{background-color:#CCFFDD}
+td.q{background-color:#FFCCDD}
+td.m{text-align:left;background-color:#FFE0C0}
+td.n{background-color:#FFE0C0}
+td.b{background-color:#99CCFF}
+td.g{background-color:#AAFFBB}
+td.r{background-color:#FFA0C0}
+td.o{background-color:#FFCC90}
+td.y{background-color:#D4D4D4}
+tr.a{background-color:#DDEEFF}
+tr.f{background-color:#CCFFDD}
+tr.q{background-color:#FFCCDD}
+tr.n{background-color:#FFE0C0}
+tr.b{background-color:#99CCFF}
+tr.g{background-color:#AAFFBB}
+tr.r{background-color:#FFA0C0}
+tr.o{background-color:#FFCC90}
+tr.s{font-size:smaller}
+tr.y{background-color:#D4D4D4}
+s{color:white;text-decoration:none}
+blockquote{font-size:smaller}
+ins{display:block;margin:1em 0;text-align:center;text-decoration:none}
+table.s{border:1px solid blue;margin:20px auto;font-size:smaller}
+table.i{text-align:right}
+table.j{text-align:right;font-size:smaller}
+caption{color:#000099;margin-bottom:5px;font-size:larger;font-weight:bold}
+span{font-size:1.17em;font-weight:bold;color:#000099}
+sup{font-size:smaller;vertical-align:top}
+strong{font-size:larger;color:#990000}
+var{font-style:normal;color:#104E8B}
+cite{font-size:0.65em;font-weight:normal;margin-left:20px}
+dfn{font-style:normal;color:#990000}
+big{color:#000099}
