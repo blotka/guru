@@ -1,1 +1,1 @@
-... fragmenty stron Pavlicka
+materiały źródłowe Richarda Pavlicka
