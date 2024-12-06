@@ -1,1 +1,1 @@
-Pavlicek: liczenie w rozgrywce
+materiały źródłowe Richarda Pavlicka
