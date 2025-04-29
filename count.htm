@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0048)http://www.eastontario.com/conventions/count.htm -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<STYLE type=text/css>FORM.tb {
+	DISPLAY: inline
+}
+.cr {
+	CLEAR: right
+}
+.h {
+	FONT-FAMILY: arial,geneva,sans-serif
+}
+.c {
+	FONT-FAMILY: arial,geneva,sans-serif
+}
+.d {
+	FONT-FAMILY: arial,geneva,sans-serif
+}
+.h {
+	FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+.c {
+	FONT-SIZE: 80%
+}
+.d {
+	FONT-SIZE: 70%
+}
+DT {
+	MARGIN-TOP: 0.8em; FONT-WEIGHT: bold; FONT-SIZE: 120%
+}
+DD {
+	MARGIN-LEFT: 1.5em
+}
+.w {
+	FONT: 125% Verdana,sans-serif; COLOR: #609
+}
+.NSlyr {
+	VISIBILITY: hidden; WIDTH: 119px; POSITION: absolute
+}
+A:hover {
+	BACKGROUND: #fd3
+}
+BODY {
+	MARGIN-TOP: 4px
+}
+.y {
+	BACKGROUND: #fc0
+}
+.y1 {
+	BACKGROUND: #ffed9a
+}
+.y2 {
+	BACKGROUND: #fff3ac
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+<!--
+
+
+
+var a,b,c,d;
+
+function pick(){
+	a = Math.floor(Math.random() * 7.999); //choose a random decimal; 
+	b = Math.floor(Math.random() * 5.999); //choose a random decimal; 
+	c = Math.floor(Math.random() * Math.min(7.999,(12.999 - a - b))); //choose a random decimal; 
+	if(a+b+c<7){c=7-a-b}
+	d = 13 - a - b - c;
+	pickMess = "<font size=+4>13 = " + a + " + "+ b + " + " +c+ " + "+  "<font color=red>?</font color></font>"
+	testLine.innerHTML= pickMess;
+	}
+
+function init(){
+var alarmID
+var timeID
+var count=0
+var xxx
+var sec=0
+var min=0
+var hour=0
+var xxx=0
+//var isNav = (navigator.appName.indexOf("Netscape") !=-1);
+var alarmTime
+var h=0
+var m=0
+var mm=0
+var s=0
+var ss=0
+}
+init()
+
+function timer(){
+clearTimeout(timeID)
+count+=1
+s+=1
+ss=s
+if (s>59)s-=60,m+=1,ss-=60
+mm=m
+if (m>59)m-=60,h+=1,mm-=60
+if (ss<10)ss="0"+ss
+if (mm<10)mm="0"+mm
+xx="<font size=+3>"+h+":"+mm+":"+ss+"</font>"
+if (navigator.appName == "Netscape") {
+document.t.document.write(xx);
+document.t.document.close();}
+
+else t.innerHTML=xx
+timeID = setTimeout("timer()",1000)
+}
+
+function testLengthSet(hhh){testLength=hhh}
+
+ongoing = 0;
+
+function alarm(xxx){
+init()
+ongoing = 1;
+if (xxx=="p") xxx=(prompt("Enter the alarm time in minutes","enter minutes here, for example 3.5 = three & a half a minute"))*60
+sss=xxx-1
+if (sss==(-1))sec=0,min=0
+else hour=Math.floor(xxx/3600),xxx-=hour*3600,min=Math.floor(xxx/60),xxx-=min*60,sec=xxx
+if (sec<10) sec="0"+sec
+if (min<10) min="0"+min
+//if (hour<10) hour="0"+hour
+x="<font size=+3>"+hour+":"+min+":"+sec+"</font>"
+if (navigator.appName == "Netscape") {
+document.atime.document.write(x);
+document.atime.document.close();}
+else atime.innerHTML=x
+
+if (sss==-1) {alert("Your time is up. You had " + correct + " consecutive correct answers in  the " + testLength+ " second test")
+	clearTimeout(alarmID)
+	ongoing = 0}
+else alarmID=setTimeout("alarm(sss)",1000)
+}
+
+function ongoingTest(){
+	if (ongoing==1){	
+		clearTimeout(alarmID)
+		ongoing = 0
+		}
+	}
+
+function stopTimer(c){
+if (c=='stop') clearTimeout(timeID)
+if (c=='clear') clearTimeout(timeID),ss=0,mm=0,m=0,s=-1,count=0,timer()//,stopTimer('stop'); //this last bit would stop the timer on reset
+}
+
+function stopAlarm(){
+clearTimeout(alarmID)
+min=0,sec=0,hour=0,xxx=0
+}
+
+//-->
+</SCRIPT>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=object1 style="Z-INDEX: 2; LEFT: 10px; POSITION: absolute; TOP: 10px">
+<DIV id=atime 
+style="Z-INDEX: 2; LEFT: 40px; POSITION: absolute; TOP: 110px"><FONT 
+size=+3>0:00:00</FONT></DIV>
+<TABLE cellPadding=2 width=300 border=1>
+  <TBODY>
+  <TR>
+    <TD>
+      <CENTER><B><FONT size=+2>Start/Set Test Length 
+      (Minutes)</FONT></B></CENTER></TD></TR>
+  <TR>
+    <TD>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD><FONT color=red>Click to Start:</FONT> 
+          <TD width="20%">
+            <CENTER><FONT size=+2><A 
+            href="javascript:scoreInit();ongoingTest();alarm(60);%20testLengthSet(60)">1 
+            </A></FONT></CENTER></TD>
+          <TD width="20%">
+            <CENTER><FONT size=+2><A 
+            href="javascript:ongoingTest();alarm(300);testLengthSet(300)">5 
+            </A></FONT></CENTER></TD>
+          <TD width="20%">
+            <CENTER><FONT size=+2><A 
+            href="javascript:ongoingTest();alarm(600);testLengthSet(600)">10 
+            </A></FONT></CENTER></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV id=testLine 
+style="Z-INDEX: 2; LEFT: 250px; POSITION: absolute; TOP: 200px"><FONT 
+size=+3>Test Line Here</FONT></DIV>
+<SCRIPT type=text/javascript><!--
+pick()
+
+	correct = 0;
+	correct1 = 0;
+	correct2 = 0;
+
+function scoreInit(){
+	correct = 0;
+	correct1 = 0;
+	correct2 = 0;
+	scoreBoard()
+	scoreBoard1()
+	scoreBoard2()
+	}
+scoreInit()
+
+function scoreBoard(){
+	scoreMess = "<font size=+3>Consecutive Correct: <font color=blue>" + correct + "</font>"
+	score.innerHTML= scoreMess;
+	}
+
+function scoreBoard1(){
+	scoreMess1 = "<font size=+3>Total Correct: <font color=blue>" + correct1 + "</font>"
+	score1.innerHTML= scoreMess1;
+	}
+
+function scoreBoard2(){
+	scoreMess2 = "<font size=+3>Wrong: <font color=red>" + correct2 + "</font>"
+	score2.innerHTML= scoreMess2;
+	}
+
+function right(){correct++;correct1++;pick()}
+
+function wrong(){
+	alert("You had " +correct+ " in a row before you erred.")
+	correct = 0;
+	correct2++;
+	scoreBoard2();
+	pick()
+	}
+
+function test(v){
+	if (v == d){right()}
+	else {wrong()}
+	scoreBoard();
+	scoreBoard1();
+	}
+
+//--></SCRIPT>
+
+<DIV id=buttons style="Z-INDEX: 2; LEFT: 600px; POSITION: absolute; TOP: 143px"><INPUT onclick=javascript:test(0) type=button value=0><BR><INPUT onclick=javascript:test(1) type=button value=1><BR><INPUT onclick=javascript:test(2) type=button value=2><BR><INPUT onclick=javascript:test(3) type=button value=3><BR><INPUT onclick=javascript:test(4) type=button value=4><BR><INPUT onclick=javascript:test(5) type=button value=5><BR><INPUT onclick=javascript:test(6) type=button value=6><BR><INPUT onclick=javascript:test(7) type=button value=7> 
+</DIV>
+<DIV id=score 
+style="Z-INDEX: 2; LEFT: 10px; POSITION: absolute; TOP: 370px"><FONT 
+size=+3>Consecutive Correct: <FONT color=blue>0</FONT></FONT> </DIV>
+<DIV id=score1 
+style="Z-INDEX: 2; LEFT: 350px; POSITION: absolute; TOP: 370px"><FONT 
+size=+3>Total Correct: <FONT color=blue>0</FONT></FONT> </DIV>
+<DIV id=score2 
+style="Z-INDEX: 2; LEFT: 590px; POSITION: absolute; TOP: 370px"><FONT 
+size=+3>Wrong: <FONT color=red>0</FONT></FONT> </DIV>
+</BODY></HTML>
